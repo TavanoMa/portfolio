@@ -1,5 +1,5 @@
-const buttons = document.querySelectorAll(".sections-nav button");
-const sections = document.querySelectorAll(".section");
+const buttons = document.querySelectorAll(".sections-nav button")
+const sections = document.querySelectorAll(".section")
 
 const cards = document.querySelectorAll(".project-card")
 const modal = document.getElementById("project-modal")
@@ -9,11 +9,15 @@ const closeModal = document.querySelector(".close-modal")
 // funçoes
 
 const fillTodo = () => {
-   
-  document.getElementById("modal-image").src = "img/projeto_todo.png";
-  document.getElementById("modal-title").textContent = "Todo App";
-  document.getElementById("modal-description").textContent =
-  "Aplicação de gerenciamento de tarefas com CRUD completo, filtros e persistência usando LocalStorage.";
+  document.getElementById("modal-image").src = "img/projeto_todo.png"
+  document.getElementById("modal-title").textContent = "Todo App"
+  document.getElementById("modal-description").textContent = ""
+}
+
+const fillNotes = () => {
+  document.getElementById("modal-image").src = "img/projeto_notes.png"
+  document.getElementById("modal-title").textContent = "Todo App"
+  document.getElementById("modal-description").textContent = ""
 }
 
 
@@ -22,10 +26,10 @@ const fillTodo = () => {
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    const target = button.getAttribute("data-section");
+    const target = button.getAttribute("data-section")
 
     
-    buttons.forEach((btn) => btn.classList.remove("active"));
+    buttons.forEach((btn) => btn.classList.remove("active"))
 
     sections.forEach((section) => section.classList.remove("active"))
 
@@ -44,10 +48,20 @@ cards.forEach((card) => {
 
     if (id === "todo-project") {
       fillTodo()
+    } if (id === "notes-project") {
+      fillNotes()
+    } else {
+      
     }
   })
 })
 
 closeModal.addEventListener("click", () => {
     modal.classList.remove("active")
+})
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.remove("active")
+  }
 })
