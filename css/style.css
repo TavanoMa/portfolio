@@ -238,3 +238,74 @@ body {
   font-size: 0.8rem;
   color: #999;
 }
+
+/*MODAL*/
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999;
+  display: none;
+  
+}
+
+.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #111;
+  max-width: 700px;
+  width: 90%;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal span {
+  font-size: 30px;
+  position: relative;
+  top: -12px;
+  cursor: pointer;
+  
+}
+.modal-content img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+
+#modal-title {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+#modal-description {
+  text-align: center;
+  font-size: .9rem;
+  color: #cfcfcf;
+}
+
+.modal-links {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.modal-links a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #38bdf8;
+    margin-right: 10px;
+}
+
+.modal-links a:hover {
+  text-decoration: underline;
+}
