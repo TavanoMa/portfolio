@@ -312,7 +312,60 @@ body {
   text-decoration: underline;
 }
 
-/*tags*/
+.modal-description {
+  display: none;
+}
+
+.modal-description.active {
+  display: block;
+}
+
+#description-todo,
+#description-notes,
+#description-box-shadow {
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+  color: #dcdcdc;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
+#description-todo p,
+#description-notes p,
+#description-box-shadow p {
+  font-size: 15px;
+  color: #e0e0e0;
+}
+
+#description-todo ul,
+#description-notes ul,
+#description-box-shadow ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+#description-todo li,
+#description-notes li,
+#description-box-shadow li {
+  font-size: 14px;
+  color: #bdbdbd;
+  padding-left: 16px;
+  position: relative;
+}
+
+#description-todo li::before,
+#description-notes li::before,
+#description-box-shadow li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #00bcd4;
+}
 
 .tags {
   display: flex;

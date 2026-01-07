@@ -5,27 +5,28 @@ const cards = document.querySelectorAll(".project-card")
 const modal = document.getElementById("project-modal")
 const closeModal = document.querySelector(".close-modal")
 
-const cardLinks = document.querySelectorAll(".project-links a")
+const modalDescriptions = document.querySelectorAll(".modal-description")
+
 
 const infoModal = {
   todoApp: {
     img: "img/projeto_todo.png",
     title: "Todo App",
-    description: "exemplo descrição",
+    descriptionId: "description-todo",
     demoLink: "https://tavanoma.github.io/todo-app/",
     gitHubLink: "https://github.com/TavanoMa/todo-app"
   },
   notesApp: {
     img: "img/projeto_notes.png",
     title: "Notes",
-    description: "exemplo descrição notes",
+    descriptionId: "description-notes",
     demoLink: "https://tavanoma.github.io/notes/",
     gitHubLink: "https://github.com/TavanoMa/notes"
   },
   boxShadowApp: {
     img: "img/projeto_box_shadow.png",
     title: "Gerador de Box Shadow",
-    description: "exemplo descrição notes",
+    descriptionId: "description-box-shadow",
     demoLink: "https://tavanoma.github.io/box-shadow-generator/",
     gitHubLink: "https://github.com/TavanoMa/box-shadow-generator"
   }
@@ -41,10 +42,19 @@ const fillModal = (key) => {
 
   document.getElementById("modal-image").src = info.img
   document.getElementById("modal-title").textContent = info.title
-  document.getElementById("modal-description").textContent = info.description
   document.getElementById("demo-link").href = info.demoLink
   document.getElementById("github-link").href = info.gitHubLink
+
+   modalDescriptions.forEach(desc => {
+    desc.classList.remove("active")
+  })
+
+  document.getElementById(info.descriptionId).classList.add("active")
   
+}
+
+const closingModal = () => {
+  modal.classList.remove("active")
 }
 
 //eventos
@@ -70,7 +80,7 @@ cards.forEach((card) => {
     
     const id = card.id
 
-    modal.classList.toggle("active")
+    modal.classList.add("active")
 
     if (id === "todo-project") {
       fillModal("todoApp")
@@ -82,20 +92,18 @@ cards.forEach((card) => {
   })
 })
 
+
+
 closeModal.addEventListener("click", () => {
-    modal.classList.toggle("active")
+    closingModal()
 })
 
 modal.addEventListener("click", (e) => {
   if (e.target === modal) {
-    modal.classList.toggle("active")
+    closingModal()
   }
 })
 
-cardLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    modal.classList.toggle("active")
-  })
-})
+
 
 
