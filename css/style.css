@@ -139,6 +139,7 @@ body {
   flex-direction: column;
   gap: 12px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
 }
 
 .project-card:hover {
@@ -269,11 +270,12 @@ body {
 }
 
 .modal span {
-  font-size: 30px;
+  font-size: 35px;
   position: relative;
   top: -12px;
   cursor: pointer;
-  
+  max-width: 30px;
+  padding: 0;
 }
 .modal-content img {
   width: 100%;
@@ -308,4 +310,35 @@ body {
 
 .modal-links a:hover {
   text-decoration: underline;
+}
+
+/*tags*/
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: center;
+}
+
+.tags-control {
+  display: flex;
+  gap: 8px;
+  background-color: #303030;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.tags-control img {
+  height: 18px;
+  width: 18px;
+  
+}
+
+.tags-control p {
+  font-size: 12px;
+  line-height: 1;
+  color: #eaeaea;
 }

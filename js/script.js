@@ -5,21 +5,47 @@ const cards = document.querySelectorAll(".project-card")
 const modal = document.getElementById("project-modal")
 const closeModal = document.querySelector(".close-modal")
 
+const cardLinks = document.querySelectorAll(".project-links a")
+
+const infoModal = {
+  todoApp: {
+    img: "img/projeto_todo.png",
+    title: "Todo App",
+    description: "exemplo descrição",
+    demoLink: "https://tavanoma.github.io/todo-app/",
+    gitHubLink: "https://github.com/TavanoMa/todo-app"
+  },
+  notesApp: {
+    img: "img/projeto_notes.png",
+    title: "Notes",
+    description: "exemplo descrição notes",
+    demoLink: "https://tavanoma.github.io/notes/",
+    gitHubLink: "https://github.com/TavanoMa/notes"
+  },
+  boxShadowApp: {
+    img: "img/projeto_box_shadow.png",
+    title: "Gerador de Box Shadow",
+    description: "exemplo descrição notes",
+    demoLink: "https://tavanoma.github.io/box-shadow-generator/",
+    gitHubLink: "https://github.com/TavanoMa/box-shadow-generator"
+  }
+
+}
+
 
 // funçoes
 
-const fillTodo = () => {
-  document.getElementById("modal-image").src = "img/projeto_todo.png"
-  document.getElementById("modal-title").textContent = "Todo App"
-  document.getElementById("modal-description").textContent = ""
-}
+const fillModal = (key) => {
 
-const fillNotes = () => {
-  document.getElementById("modal-image").src = "img/projeto_notes.png"
-  document.getElementById("modal-title").textContent = "Todo App"
-  document.getElementById("modal-description").textContent = ""
-}
+  const info = infoModal[key]
 
+  document.getElementById("modal-image").src = info.img
+  document.getElementById("modal-title").textContent = info.title
+  document.getElementById("modal-description").textContent = info.description
+  document.getElementById("demo-link").href = info.demoLink
+  document.getElementById("github-link").href = info.gitHubLink
+  
+}
 
 //eventos
 
@@ -44,24 +70,32 @@ cards.forEach((card) => {
     
     const id = card.id
 
-    modal.classList.add("active")
+    modal.classList.toggle("active")
 
     if (id === "todo-project") {
-      fillTodo()
+      fillModal("todoApp")
     } if (id === "notes-project") {
-      fillNotes()
-    } else {
-      
-    }
+      fillModal("notesApp")
+    } if (id === "box-shadow-project") {
+      fillModal("boxShadowApp")
+    } 
   })
 })
 
 closeModal.addEventListener("click", () => {
-    modal.classList.remove("active")
+    modal.classList.toggle("active")
 })
 
 modal.addEventListener("click", (e) => {
   if (e.target === modal) {
-    modal.classList.remove("active")
+    modal.classList.toggle("active")
   }
 })
+
+cardLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    modal.classList.toggle("active")
+  })
+})
+
+
