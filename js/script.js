@@ -7,6 +7,9 @@ const closeModal = document.querySelector(".close-modal")
 
 const modalDescriptions = document.querySelectorAll(".modal-description")
 
+const trail = document.querySelector(".trail")
+const body = document.querySelector("body")
+
 
 const infoModal = {
   todoApp: {
@@ -104,6 +107,10 @@ modal.addEventListener("click", (e) => {
   }
 })
 
+trail.addEventListener("click", () => {
+  body.classList.toggle("light")
+  trail.classList.toggle("light")
+})
 
 
 
