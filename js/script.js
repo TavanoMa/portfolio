@@ -16,8 +16,8 @@ const infoModal = {
     img: "img/projeto_todo.png",
     title: "Todo App",
     descriptionId: "description-todo",
-    demoLink: "https://tavanoma.github.io/todo-app/",
-    gitHubLink: "https://github.com/TavanoMa/todo-app"
+    demoLink: "https://todo-list-gold-mu.vercel.app/",
+    gitHubLink: "https://github.com/TavanoMa/todo-list"
   },
   notesApp: {
     img: "img/projeto_notes.png",
