@@ -62,6 +62,31 @@
         <h3>Projetos</h3>
 
         <div class="projects-list">
+
+          <article class="project-card" id="img-generator-project">
+            <img src="img/projeto_gerador_de_imagens.png" alt="Projeto 1" fetchpriority="high"/>
+            <h4>Gerador de imagens</h4>
+            <p>Ferramenta de geração de imagens com login e registro de usuários, desenvolvido em react e integrado ao banco de dados do Supabase</p>
+            <div class="tags">
+              <div class="tags-control">
+                <p>HTML</p>
+                <img src="img/html_icone.png" alt="">
+              </div>
+              <div class="tags-control">
+                <p>CSS</p>
+                <img src="img/css_icone.png" alt="">
+              </div>
+              <div class="tags-control">
+                <p>REACT</p>
+                <img src="img/react_icone.png" alt="">
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://image-generator-one-mu.vercel.app/" target="_blank">Projeto</a>
+              <a href="https://github.com/TavanoMa/image-generator" target="_blank">GitHub</a>
+            </div>
+          </article>
+
           <article class="project-card" id="todo-project">
             <img src="img/projeto_todo_menor.png" alt="Projeto 1" fetchpriority="high"/>
             <h4>Todo List Avançado</h4>
@@ -190,6 +215,19 @@
             <img src="" alt="" id="modal-image">
             <h2 id="modal-title"></h2>
             
+            <div id="description-image-generator" class= "modal-description">
+                <p>
+          Ferramenta de geração de imagens com login e registro de usuários, desenvolvido em react e integrado ao banco de dados do Supabase.
+                </p>
+                <ul>
+                  <li>Autenticação de usuário</li>
+                  <li>Registro de usuário</li>
+                  <li>Envio do prompt para solicitação de imagens</li>
+                  <li>Limite de 5 imagens por usuário</li>
+                  <li>Persistência automática com Supabase</li>
+                </ul>
+              </div>
+
             <div id="description-todo" class= "modal-description">
                 <p>
           Aplicação de lista de tarefas desenvolvida em JavaScript com React, conta com autenticação, registro de usuário e persistência de dados via Supabase. Permite o gerenciamento completo

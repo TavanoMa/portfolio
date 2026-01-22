@@ -12,6 +12,13 @@ const body = document.querySelector("body")
 
 
 const infoModal = {
+  imageGenerator: {
+    img: "img/projeto_gerador_de_imagens.png",
+    title: "Gerador de Imagens",
+    descriptionId: "description-image-generator",
+    demoLink: "https://image-generator-one-mu.vercel.app/",
+    gitHubLink: "https://github.com/TavanoMa/image-generator"
+  },
   todoApp: {
     img: "img/projeto_todo.png",
     title: "Todo App",
@@ -91,6 +98,8 @@ cards.forEach((card) => {
       fillModal("notesApp")
     } if (id === "box-shadow-project") {
       fillModal("boxShadowApp")
+    } if (id === "img-generator-project") {
+      fillModal("imageGenerator")
     } 
   })
 })

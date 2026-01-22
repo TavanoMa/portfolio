@@ -182,10 +182,10 @@ body {
 }
 
 .projects-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 24px;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-items: center; 
 }
 
 .project-card {
@@ -206,6 +206,8 @@ body {
 }
 
 .project-card img {
+  width: 240px;
+  height: 159px;
   width: 100%;
   border-radius: 8px;
   object-fit: cover;
@@ -337,6 +339,8 @@ body {
 }
 
 .modal-content img {
+  width: 660px;
+  height: 435px;
   width: 100%;
   border-radius: 8px;
   margin-bottom: 14px;
@@ -381,7 +385,8 @@ body {
 
 #description-todo,
 #description-notes,
-#description-box-shadow {
+#description-box-shadow,
+#description-image-generator {
   flex-direction: column;
   gap: 12px;
   margin-top: 16px;
@@ -392,14 +397,16 @@ body {
 
 #description-todo p,
 #description-notes p,
-#description-box-shadow p {
+#description-box-shadow p,
+#description-image-generator p {
   font-size: 15px;
   color: var(--text-light);
 }
 
 #description-todo ul,
 #description-notes ul,
-#description-box-shadow ul {
+#description-box-shadow ul,
+#description-image-generator ul {
   list-style: none;
   padding-left: 0;
   display: flex;
@@ -410,7 +417,8 @@ body {
 
 #description-todo li,
 #description-notes li,
-#description-box-shadow li {
+#description-box-shadow li,
+#description-image-generator li {
   font-size: 14px;
   color: var(--text-soft);
   padding-left: 16px;
@@ -419,7 +427,8 @@ body {
 
 #description-todo li::before,
 #description-notes li::before,
-#description-box-shadow li::before {
+#description-box-shadow li::before,
+#description-image-generator li::before {
   content: "•";
   position: absolute;
   left: 0;
