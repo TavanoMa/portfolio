@@ -16,8 +16,8 @@ const infoModal = {
     img: "img/projeto_gerador_de_imagens.png",
     title: "Gerador de Imagens",
     descriptionId: "description-image-generator",
-    demoLink: "https://image-generator-one-mu.vercel.app/",
-    gitHubLink: "https://github.com/TavanoMa/image-generator"
+    demoLink: "https://fotocomfamosos.com.br",
+    gitHubLink: "https://github.com/TavanoMa/gerador-de-imagem-com-famosos"
   },
   todoApp: {
     img: "img/projeto_todo.png",
